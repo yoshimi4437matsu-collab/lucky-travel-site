@@ -49,18 +49,18 @@ window.MONTHLY_FEATURES = [
   },
 
   /* ---------- 2026年9月22日〜10月8日：九州ふっこう応援割（予告） ----------
-     当社で取り扱うのは長崎・熊本・大分の3県（2026年9月24日時点・参画申請中） */
+     当社（旅行代理店）での大分県分の受付は10月9日から */
   {
     start:    "2026-09-22",
     end:      "2026-10-08",
     label:    "🎌 まもなく受付開始",
-    period:   "当社の取扱は長崎・熊本・大分",
+    period:   "九州7県が対象",
     title:    "九州ふっこう応援割",
-    text:     "九州を旅して応援する、国の旅行支援です。ラッキートラベルでは、長崎県・熊本県・大分県の3県について参画を申請中です。受付開始は、準備が整い次第ご案内します。",
-    points:   ["九州に目的地が限定される、1泊以上の旅行・宿泊が対象",
-               "割引率は50％（熊本県は60％）",
+    text:     "九州を旅して応援する、国の旅行支援です。九州7県それぞれで実施され、割引率・対象期間は県ごとに異なります。ラッキートラベルでの受付は、各県の準備が整い次第、順次ご案内します。",
+    points:   ["九州7県の宿泊を含む、1泊以上の旅行・宿泊が対象",
+               "割引率は50％（熊本県・鹿児島県は60％）",
                "割引上限は1人1旅行あたり2万円〜3万5千円"],
-    note:     "※福岡県・佐賀県・宮崎県・鹿児島県は、当社ではお取り扱いできません。予約サイトまたは宿泊施設へ直接お申込みください。",
+    note:     "※予算の上限に達し次第終了します。ご希望の行き先が決まりましたら、お早めにご相談ください。当社での受付状況を県ごとにご案内します。",
     table:    true,
     image:    "images/rec-kyushu.jpg",
     imageAlt: "九州の風景",
@@ -74,13 +74,13 @@ window.MONTHLY_FEATURES = [
     start:    "2026-10-09",
     end:      "2026-12-25",
     label:    "🎌 受付中",
-    period:   "当社の取扱は長崎・熊本・大分",
+    period:   "九州7県が対象",
     title:    "九州ふっこう応援割",
-    text:     "九州を旅して応援する、国の旅行支援です。ラッキートラベルでは、長崎県・熊本県・大分県のご旅行を承ります。行き先・日程・人数をお聞かせください。",
-    points:   ["九州に目的地が限定される、1泊以上の旅行・宿泊が対象",
-               "割引率は50％（熊本県は60％）",
+    text:     "九州を旅して応援する、国の旅行支援です。九州7県それぞれで実施され、割引率・対象期間は県ごとに異なります。ラッキートラベルでの受付は、各県の準備が整い次第、順次ご案内します。",
+    points:   ["九州7県の宿泊を含む、1泊以上の旅行・宿泊が対象",
+               "割引率は50％（熊本県・鹿児島県は60％）",
                "割引上限は1人1旅行あたり2万円〜3万5千円"],
-    note:     "※予算の上限に達し次第終了します。福岡県・佐賀県・宮崎県・鹿児島県は、当社ではお取り扱いできません。",
+    note:     "※予算の上限に達し次第終了します。県や販売先によって、期間内でも受付を終了している場合があります。行き先・日程・人数をお聞かせください。",
     table:    true,
     image:    "images/rec-kyushu.jpg",
     imageAlt: "九州の風景",
@@ -210,10 +210,6 @@ a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible,
 .pref-title{font-family:var(--serif);font-weight:800;color:var(--navy);font-size:24px;margin-bottom:14px;}
 .pref-title .script{font-family:var(--script);font-weight:400;color:var(--gold);font-size:22px;margin-left:10px;}
 .pref-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
-.pref-grid.three{grid-template-columns:repeat(3,1fr);}
-.pref-block .doc-body{padding:0;font-size:16.5px;}
-.pref-block .doc-body table{margin-bottom:6px;}
-.pref-block .pref-title{margin-top:26px;}
 .pref-card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 6px 16px rgba(18,53,107,.08);}
 .pref-card .photo{aspect-ratio:4/3;}
 .pref-card figcaption{padding:12px 14px 14px;}
@@ -300,7 +296,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible,
 .info-note{background:var(--cream);border-left:5px solid var(--gold);border-radius:8px;padding:14px 18px;font-size:16.5px;font-weight:700;}
 
 /* ===== お問い合わせ画面 ===== */
-.contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
 .cbox{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;text-align:center;box-shadow:0 6px 18px rgba(18,53,107,.06);}
 .cbox .ico{font-size:32px;}
 .cbox b{display:block;color:var(--navy);font-size:22px;line-height:1.45;overflow-wrap:anywhere;margin-top:4px;}
@@ -362,9 +358,6 @@ a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible,
 .f-name{font-family:var(--serif);font-weight:800;font-size:22px;}
 .f-name .script{font-family:var(--script);font-weight:400;color:var(--gold-soft);margin-left:8px;}
 .f-left p{font-size:15.5px;color:#e3e9f4;line-height:1.9;margin-top:6px;}
-.f-ig{margin-top:10px;}
-.f-ig a{display:inline-block;font-size:16px;font-weight:900;color:#fff;border:2px solid var(--gold-soft);border-radius:999px;padding:7px 18px;}
-.f-ig a:hover{background:var(--gold);border-color:var(--gold);}
 .f-links{display:grid;grid-template-columns:repeat(2,auto);gap:4px 28px;align-content:start;}
 .f-links a{font-size:15.5px;font-weight:700;color:#e3e9f4;}
 .f-links a:hover{color:var(--gold-soft);}
@@ -520,48 +513,39 @@ a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible,
         </div>
       </article>
       <div class="pref-block" id="feat-table" hidden>
-        <h3 class="pref-title">当社でお取り扱いする3県<span class="script">Our Areas</span></h3>
-        <div class="pref-grid three">
+        <h3 class="pref-title">九州7県が対象です<span class="script">Kyushu 7 Areas</span></h3>
+        <div class="pref-grid">
+          <figure class="pref-card">
+            <div class="photo"><img src="images/pref-fukuoka.jpg" alt="福岡県・門司港レトロ" loading="lazy"></div>
+            <figcaption><b>福岡県</b><span>門司港レトロ</span><small>10月1日〜12月15日／50％</small><small class="start">旅行会社の受付開始：9月24日〜</small></figcaption>
+          </figure>
+          <figure class="pref-card">
+            <div class="photo"><img src="images/pref-saga.jpg" alt="佐賀県・祐徳稲荷神社" loading="lazy"></div>
+            <figcaption><b>佐賀県</b><span>祐徳稲荷神社</span><small>10月1日〜12月25日／50％</small><small class="start">旅行会社の受付開始：10月2日〜</small></figcaption>
+          </figure>
           <figure class="pref-card">
             <div class="photo"><img src="images/pref-nagasaki.jpg" alt="長崎県・長崎港・洋館" loading="lazy"></div>
-            <figcaption><b>長崎県</b><span>長崎港・洋館</span><small>10月1日〜12月25日／50％</small><small class="start">当社の受付：9月30日〜（申請中）</small></figcaption>
+            <figcaption><b>長崎県</b><span>長崎港・洋館</span><small>10月1日〜12月25日／50％</small><small class="start">旅行会社の受付開始：9月30日〜</small></figcaption>
           </figure>
           <figure class="pref-card">
             <div class="photo"><img src="images/pref-kumamoto.jpg" alt="熊本県・阿蘇" loading="lazy"></div>
-            <figcaption><b>熊本県</b><span>阿蘇</span><small>10月1日〜12月25日／60％</small><small class="start">当社の受付：準備が整い次第</small></figcaption>
+            <figcaption><b>熊本県</b><span>阿蘇</span><small>10月1日〜12月25日／60％</small><small class="start">旅行会社の受付開始：準備が整った事業者から順次</small></figcaption>
           </figure>
           <figure class="pref-card">
             <div class="photo"><img src="images/pref-oita.jpg" alt="大分県・由布院温泉" loading="lazy"></div>
-            <figcaption><b>大分県</b><span>由布院温泉</span><small>10月9日〜12月25日／50％</small><small class="start">当社の受付：10月9日〜（申請中）</small></figcaption>
+            <figcaption><b>大分県</b><span>由布院温泉</span><small>10月9日〜12月25日／50％</small><small class="start">旅行会社の受付開始：10月9日〜</small></figcaption>
+          </figure>
+          <figure class="pref-card">
+            <div class="photo"><img src="images/pref-miyazaki.jpg" alt="宮崎県・高千穂峡" loading="lazy"></div>
+            <figcaption><b>宮崎県</b><span>高千穂峡</span><small>10月1日〜12月25日／50％</small><small class="start">旅行会社の受付開始：9月28日〜</small></figcaption>
+          </figure>
+          <figure class="pref-card">
+            <div class="photo"><img src="images/pref-kagoshima.jpg" alt="鹿児島県・桜島" loading="lazy"></div>
+            <figcaption><b>鹿児島県</b><span>桜島</span><small>10月中旬〜2027年2月末／60％</small><small class="start">旅行会社の受付開始：10月中旬（予定）〜</small></figcaption>
           </figure>
         </div>
-        <p class="pref-caption">※写真はイメージです。大分県は、熊本県または鹿児島県に泊まる周遊型の場合60％になります。</p>
-
-        <h3 class="pref-title">当社ではお取り扱いできない県<span class="script">Other Areas</span></h3>
-        <div class="doc-body">
-          <table>
-            <tr><th>福岡県</th><td>県内に事業所のある旅行会社のみが参画できるため、当社では取り扱えません。予約サイト、または宿泊施設へ直接お申込みください。宿泊対象は10月1日〜12月15日で、他県より10日早く終了します。</td></tr>
-            <tr><th>佐賀県</th><td>県外の旅行会社は取り扱えません。予約サイト、または宿泊施設へ直接お申込みください。宿泊対象は10月1日〜12月25日です。</td></tr>
-            <tr><th>宮崎県</th><td>予算枠が確保できなかったため、当社では取り扱えません。予約サイト、宿泊施設、県内の旅行会社へお申込みください。宿泊対象は10月1日〜12月25日です。</td></tr>
-            <tr><th>鹿児島県</th><td>県外の旅行会社は取り扱えません。予約サイト、または県内の宿泊施設へ直接お申込みください。予約開始は10月中旬の予定、宿泊対象は10月中旬〜2027年2月末（12月26日〜1月3日は対象外）です。</td></tr>
-          </table>
-        </div>
-
-        <h3 class="pref-title">割引上限額<span class="script">Discount Cap</span></h3>
-        <div class="doc-body">
-          <table>
-            <tr><th>宿泊単体・交通付き宿泊旅行（1泊）</th><td>1人1旅行あたり 20,000円</td></tr>
-            <tr><th>交通付き宿泊旅行（2泊以上）</th><td>1人1旅行あたり 30,000円</td></tr>
-            <tr><th>周遊型旅行（宿泊地が2県以上）</th><td>1人1旅行あたり 35,000円</td></tr>
-          </table>
-        </div>
-
-        <p class="pref-note">ご利用にあたっての注意点<br>
-        ・販売開始前のご予約は対象外です。すでにお済みの予約に、あとから割引を付けることはできません。<br>
-        ・県ごと・事業者ごとに予算の枠があり、上限に達した時点で受付を終了します。<br>
-        ・日帰り旅行、ビジネス出張・公費での出張・資格取得目的の宿泊は対象外です。<br>
-        ・ご宿泊時に、代表者の本人確認と、利用証明書へのご署名が必要です。<br>
-        ・九州以外の行き先を含む旅行は、対象外となる場合があります。</p>
+        <p class="pref-caption">※写真はイメージです。受付開始日は各県が公表している旅行会社での販売開始日です。</p>
+        <p class="pref-note">上の期間・割引率は、各県が定める制度の内容です。県ごとに予算が決まっており、上限に達すると期間内でも終了します。当社での受付は、各県の準備が整い次第、順次ご案内します。ご希望の行き先が決まりましたら、お早めにご相談ください。</p>
       </div>
     </div>
   </section>
@@ -792,7 +776,6 @@ a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible,
       <div class="cbox"><span class="ico" aria-hidden="true">📞</span><b>0972-23-8888</b><small>お電話でのご相談（10:00〜19:00）</small><a class="btn btn-navy" href="tel:0972238888">電話をかける</a></div>
       <div class="cbox"><span class="ico" aria-hidden="true">✉️</span><b>yk-tour@saiki.tv</b><small>メールでのご相談</small><a class="btn btn-navy" href="mailto:yk-tour@saiki.tv?subject=%E3%80%90%E6%97%85%E8%A1%8C%E7%9B%B8%E8%AB%87%E3%80%91%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%8B%E3%82%89%E3%81%AE%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B&amp;body=%E3%83%A9%E3%83%83%E3%82%AD%E3%83%BC%E3%83%88%E3%83%A9%E3%83%99%E3%83%AB%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%20%E5%BE%A1%E4%B8%AD%0D%0A%0D%0A%E2%96%A0%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0D%0A%E2%96%A0%E3%81%8A%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7%EF%BC%9A%0D%0A%E2%96%A0%E3%81%94%E7%9B%B8%E8%AB%87%E3%81%AE%E7%A8%AE%E9%A1%9E%EF%BC%88%E6%97%85%E8%A1%8C%E7%9B%B8%E8%AB%87%EF%BC%8F%E8%A6%8B%E7%A9%8D%E3%82%82%E3%82%8A%EF%BC%8F%E5%9B%A3%E4%BD%93%E6%97%85%E8%A1%8C%EF%BC%8F%E8%88%AA%E7%A9%BA%E5%88%B8%E3%83%BB%E5%AE%BF%E6%B3%8A%20%E3%81%AA%E3%81%A9%EF%BC%89%EF%BC%9A%0D%0A%E2%96%A0%E8%A1%8C%E3%81%8D%E5%85%88%EF%BC%9A%0D%0A%E2%96%A0%E4%BA%BA%E6%95%B0%EF%BC%9A%0D%0A%E2%96%A0%E5%87%BA%E7%99%BA%E5%B8%8C%E6%9C%9B%E6%97%A5%EF%BC%9A%0D%0A%E2%96%A0%E3%81%94%E4%BA%88%E7%AE%97%EF%BC%9A%0D%0A%E2%96%A0%E3%81%94%E7%9B%B8%E8%AB%87%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A%0D%0A">メールを作成する</a></div>
       <div class="cbox"><span class="ico" aria-hidden="true">🏢</span><b>店頭でのご相談</b><small>〒876-0843<br>大分県佐伯市長島町1丁目35-27<br>土曜・日曜・祝日休み</small></div>
-      <div class="cbox"><span class="ico" aria-hidden="true">📷</span><b>Instagram</b><small>@oitlkt<br>最新のお知らせを発信しています</small><a class="btn btn-line" href="https://www.instagram.com/oitlkt/" target="_blank" rel="noopener">Instagramを見る</a></div>
     </div>
     <div class="mail-guide">
       <h2>メールでのご相談方法</h2>
@@ -873,7 +856,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible,
             <tr><th>取消料</th><td>各旅行商品ごとの旅行条件書に基づきます。</td></tr>
             <tr><th>手配内容</th><td>航空券・宿泊・旅行商品・団体旅行など、お申込み内容に応じて個別にご案内します。</td></tr>
           </table>
-          <p>取消料率は、旅行商品の種類（パッケージ旅行・宿泊・航空券・JR券・団体旅行など）や、旅行会社ごとに異なります。お申込みの際に、その商品の旅行条件書でご確認ください。ご不明な点は、お電話・メール・店頭でお気軽にお問い合わせください。</p>
+          <p class="todo">【準備中】取消料率などは商品の種類により異なります。正式な旅行条件書の内容を確認のうえ掲載します。</p>
         </div>
       </details>
 
@@ -997,7 +980,6 @@ a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible,
         大分県知事登録旅行業 第2-160号<br>
         （一社）全国旅行業協会 正会員<br>
         総合旅行業務取扱管理者　田村 洋</p>
-        <p class="f-ig"><a href="https://www.instagram.com/oitlkt/" target="_blank" rel="noopener">📷 Instagram @oitlkt　最新のお知らせはこちら</a></p>
       </div>
     </div>
     <nav class="f-links" aria-label="フッターメニュー">
