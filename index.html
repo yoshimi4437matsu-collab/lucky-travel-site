@@ -49,18 +49,18 @@ window.MONTHLY_FEATURES = [
   },
 
   /* ---------- 2026年9月22日〜10月8日：九州ふっこう応援割（予告） ----------
-     当社（旅行代理店）での大分県分の受付は10月9日から */
+     当社で取り扱うのは長崎・熊本・大分の3県（2026年9月24日時点・参画申請中） */
   {
     start:    "2026-09-22",
     end:      "2026-10-08",
     label:    "🎌 まもなく受付開始",
-    period:   "九州7県が対象",
+    period:   "当社の取扱は長崎・熊本・大分",
     title:    "九州ふっこう応援割",
-    text:     "九州を旅して応援する、国の旅行支援です。九州7県それぞれで実施され、割引率・対象期間は県ごとに異なります。ラッキートラベルでの受付は、各県の準備が整い次第、順次ご案内します。",
-    points:   ["九州7県の宿泊を含む、1泊以上の旅行・宿泊が対象",
-               "割引率は50％（熊本県・鹿児島県は60％）",
+    text:     "九州を旅して応援する、国の旅行支援です。ラッキートラベルでは、長崎県・熊本県・大分県の3県について参画を申請中です。受付開始は、準備が整い次第ご案内します。",
+    points:   ["九州に目的地が限定される、1泊以上の旅行・宿泊が対象",
+               "割引率は50％（熊本県は60％）",
                "割引上限は1人1旅行あたり2万円〜3万5千円"],
-    note:     "※予算の上限に達し次第終了します。ご希望の行き先が決まりましたら、お早めにご相談ください。当社での受付状況を県ごとにご案内します。",
+    note:     "※福岡県・佐賀県・宮崎県・鹿児島県は、当社ではお取り扱いできません。予約サイトまたは宿泊施設へ直接お申込みください。",
     table:    true,
     image:    "images/rec-kyushu.jpg",
     imageAlt: "九州の風景",
@@ -74,13 +74,13 @@ window.MONTHLY_FEATURES = [
     start:    "2026-10-09",
     end:      "2026-12-25",
     label:    "🎌 受付中",
-    period:   "九州7県が対象",
+    period:   "当社の取扱は長崎・熊本・大分",
     title:    "九州ふっこう応援割",
-    text:     "九州を旅して応援する、国の旅行支援です。九州7県それぞれで実施され、割引率・対象期間は県ごとに異なります。ラッキートラベルでの受付は、各県の準備が整い次第、順次ご案内します。",
-    points:   ["九州7県の宿泊を含む、1泊以上の旅行・宿泊が対象",
-               "割引率は50％（熊本県・鹿児島県は60％）",
+    text:     "九州を旅して応援する、国の旅行支援です。ラッキートラベルでは、長崎県・熊本県・大分県のご旅行を承ります。行き先・日程・人数をお聞かせください。",
+    points:   ["九州に目的地が限定される、1泊以上の旅行・宿泊が対象",
+               "割引率は50％（熊本県は60％）",
                "割引上限は1人1旅行あたり2万円〜3万5千円"],
-    note:     "※予算の上限に達し次第終了します。県や販売先によって、期間内でも受付を終了している場合があります。行き先・日程・人数をお聞かせください。",
+    note:     "※予算の上限に達し次第終了します。福岡県・佐賀県・宮崎県・鹿児島県は、当社ではお取り扱いできません。",
     table:    true,
     image:    "images/rec-kyushu.jpg",
     imageAlt: "九州の風景",
@@ -145,7 +145,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible,
 
 /* 切り替えバー（メニュー） */
 .gnav{max-width:1280px;margin:0 auto;}
-.gnav ul{list-style:none;display:grid;grid-template-columns:repeat(8,1fr);gap:4px;padding:6px 20px 0;}
+.gnav ul{list-style:none;display:grid;grid-template-columns:repeat(9,1fr);gap:4px;padding:6px 20px 0;}
 .gnav a{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;padding:6px 4px 11px;white-space:nowrap;border-radius:8px 8px 0 0;color:var(--navy);font-weight:900;font-size:16px;line-height:1.35;}
 .gnav a .ico{font-size:21px;line-height:1.4;}
 .gnav a small{font-family:var(--serif);font-size:10.5px;letter-spacing:.1em;color:#6b7588;font-weight:700;}
@@ -210,6 +210,10 @@ a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible,
 .pref-title{font-family:var(--serif);font-weight:800;color:var(--navy);font-size:24px;margin-bottom:14px;}
 .pref-title .script{font-family:var(--script);font-weight:400;color:var(--gold);font-size:22px;margin-left:10px;}
 .pref-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;}
+.pref-grid.three{grid-template-columns:repeat(3,1fr);}
+.pref-block .doc-body{padding:0;font-size:16.5px;}
+.pref-block .doc-body table{margin-bottom:6px;}
+.pref-block .pref-title{margin-top:26px;}
 .pref-card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;box-shadow:0 6px 16px rgba(18,53,107,.08);}
 .pref-card .photo{aspect-ratio:4/3;}
 .pref-card figcaption{padding:12px 14px 14px;}
@@ -295,8 +299,16 @@ a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible,
 .small-note{font-size:15px;font-weight:700;color:var(--sub);margin-top:10px;}
 .info-note{background:var(--cream);border-left:5px solid var(--gold);border-radius:8px;padding:14px 18px;font-size:16.5px;font-weight:700;}
 
+.tt-pair{display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+.tt-box{background:#fff;border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:0 6px 16px rgba(18,53,107,.07);}
+.tt-box h3{font-family:var(--serif);font-weight:800;color:var(--navy);font-size:21px;margin-bottom:10px;}
+table.tt{width:100%;border-collapse:collapse;}
+table.tt th{background:var(--cream);color:var(--navy);font-weight:900;font-size:15.5px;padding:8px 10px;border:1px solid var(--line);text-align:center;}
+table.tt td{font-size:17px;font-weight:800;padding:9px 10px;border:1px solid var(--line);text-align:center;}
+table.tt td.fl{text-align:left;font-size:15.5px;color:var(--navy);white-space:nowrap;}
+.tt-note{font-size:15.5px;font-weight:700;color:var(--sub);line-height:1.8;}
 /* ===== お問い合わせ画面 ===== */
-.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
 .cbox{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px;text-align:center;box-shadow:0 6px 18px rgba(18,53,107,.06);}
 .cbox .ico{font-size:32px;}
 .cbox b{display:block;color:var(--navy);font-size:22px;line-height:1.45;overflow-wrap:anywhere;margin-top:4px;}
@@ -358,6 +370,9 @@ a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible,
 .f-name{font-family:var(--serif);font-weight:800;font-size:22px;}
 .f-name .script{font-family:var(--script);font-weight:400;color:var(--gold-soft);margin-left:8px;}
 .f-left p{font-size:15.5px;color:#e3e9f4;line-height:1.9;margin-top:6px;}
+.f-ig{margin-top:10px;}
+.f-ig a{display:inline-block;font-size:16px;font-weight:900;color:#fff;border:2px solid var(--gold-soft);border-radius:999px;padding:7px 18px;}
+.f-ig a:hover{background:var(--gold);border-color:var(--gold);}
 .f-links{display:grid;grid-template-columns:repeat(2,auto);gap:4px 28px;align-content:start;}
 .f-links a{font-size:15.5px;font-weight:700;color:#e3e9f4;}
 .f-links a:hover{color:var(--gold-soft);}
@@ -369,6 +384,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible,
 @media(max-width:960px){
   .svc-grid,.dgrid{grid-template-columns:1fr 1fr;}
   .about-box,.twocol{grid-template-columns:1fr;}
+  .tt-pair{grid-template-columns:1fr;}
   .access-box{grid-template-columns:260px 1fr;}
   .access .mapwrap{min-height:280px;}
   .features{grid-template-columns:1fr 1fr;}
@@ -380,7 +396,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible,
   .contact-grid,.f-contact{grid-template-columns:1fr;}
   .brand-name{font-size:34px;}
   .brand-en{font-size:30px;}
-  .gnav ul{grid-template-columns:repeat(4,1fr);padding:6px 12px 4px;}
+  .gnav ul{grid-template-columns:repeat(3,1fr);padding:6px 12px 4px;}
   .gnav a{border-radius:8px;}
   .gnav a[aria-current="page"]::after{left:20%;right:20%;height:3px;border-radius:3px;bottom:4px;}
 }
@@ -398,7 +414,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible,
   .header-cta{width:100%;justify-content:center;}
   .header-cta .btn{flex:1;font-size:15px;padding:9px 10px;}
   .gnav{background:#fff;}
-  .gnav ul{display:grid;grid-template-columns:repeat(4,1fr);padding:4px 6px 6px;gap:4px;}
+  .gnav ul{display:grid;grid-template-columns:repeat(3,1fr);padding:4px 6px 6px;gap:4px;}
   .gnav a{padding:6px 2px 8px;font-size:14px;border-radius:8px;}
   .gnav a small{display:none;}
   .gnav a[aria-current="page"]::after{left:20%;right:20%;height:3px;border-radius:3px;}
@@ -458,6 +474,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible,
       <li><a href="#air" data-nav="air"><span class="ico">✈️</span>航空券<small>AIR TICKET</small></a></li>
       <li><a href="#hotel" data-nav="hotel"><span class="ico">🏨</span>宿泊<small>HOTEL</small></a></li>
       <li><a href="#group" data-nav="group"><span class="ico">👥</span>団体旅行<small>GROUP</small></a></li>
+      <li><a href="#timetable" data-nav="timetable"><span class="ico">🕘</span>時刻表<small>TIMETABLE</small></a></li>
       <li><a href="#contact" data-nav="contact"><span class="ico">✉️</span>お問い合わせ<small>CONTACT</small></a></li>
       <li><a href="#company" data-nav="company"><span class="ico">🏢</span>会社概要<small>COMPANY</small></a></li>
     </ul>
@@ -513,39 +530,48 @@ a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible,
         </div>
       </article>
       <div class="pref-block" id="feat-table" hidden>
-        <h3 class="pref-title">九州7県が対象です<span class="script">Kyushu 7 Areas</span></h3>
-        <div class="pref-grid">
-          <figure class="pref-card">
-            <div class="photo"><img src="images/pref-fukuoka.jpg" alt="福岡県・門司港レトロ" loading="lazy"></div>
-            <figcaption><b>福岡県</b><span>門司港レトロ</span><small>10月1日〜12月15日／50％</small><small class="start">旅行会社の受付開始：9月24日〜</small></figcaption>
-          </figure>
-          <figure class="pref-card">
-            <div class="photo"><img src="images/pref-saga.jpg" alt="佐賀県・祐徳稲荷神社" loading="lazy"></div>
-            <figcaption><b>佐賀県</b><span>祐徳稲荷神社</span><small>10月1日〜12月25日／50％</small><small class="start">旅行会社の受付開始：10月2日〜</small></figcaption>
-          </figure>
+        <h3 class="pref-title">当社でお取り扱いする3県<span class="script">Our Areas</span></h3>
+        <div class="pref-grid three">
           <figure class="pref-card">
             <div class="photo"><img src="images/pref-nagasaki.jpg" alt="長崎県・長崎港・洋館" loading="lazy"></div>
-            <figcaption><b>長崎県</b><span>長崎港・洋館</span><small>10月1日〜12月25日／50％</small><small class="start">旅行会社の受付開始：9月30日〜</small></figcaption>
+            <figcaption><b>長崎県</b><span>長崎港・洋館</span><small>10月1日〜12月25日／50％</small><small class="start">当社の受付：9月30日〜（申請中）</small></figcaption>
           </figure>
           <figure class="pref-card">
             <div class="photo"><img src="images/pref-kumamoto.jpg" alt="熊本県・阿蘇" loading="lazy"></div>
-            <figcaption><b>熊本県</b><span>阿蘇</span><small>10月1日〜12月25日／60％</small><small class="start">旅行会社の受付開始：準備が整った事業者から順次</small></figcaption>
+            <figcaption><b>熊本県</b><span>阿蘇</span><small>10月1日〜12月25日／60％</small><small class="start">当社の受付：準備が整い次第</small></figcaption>
           </figure>
           <figure class="pref-card">
             <div class="photo"><img src="images/pref-oita.jpg" alt="大分県・由布院温泉" loading="lazy"></div>
-            <figcaption><b>大分県</b><span>由布院温泉</span><small>10月9日〜12月25日／50％</small><small class="start">旅行会社の受付開始：10月9日〜</small></figcaption>
-          </figure>
-          <figure class="pref-card">
-            <div class="photo"><img src="images/pref-miyazaki.jpg" alt="宮崎県・高千穂峡" loading="lazy"></div>
-            <figcaption><b>宮崎県</b><span>高千穂峡</span><small>10月1日〜12月25日／50％</small><small class="start">旅行会社の受付開始：9月28日〜</small></figcaption>
-          </figure>
-          <figure class="pref-card">
-            <div class="photo"><img src="images/pref-kagoshima.jpg" alt="鹿児島県・桜島" loading="lazy"></div>
-            <figcaption><b>鹿児島県</b><span>桜島</span><small>10月中旬〜2027年2月末／60％</small><small class="start">旅行会社の受付開始：10月中旬（予定）〜</small></figcaption>
+            <figcaption><b>大分県</b><span>由布院温泉</span><small>10月9日〜12月25日／50％</small><small class="start">当社の受付：10月9日〜（申請中）</small></figcaption>
           </figure>
         </div>
-        <p class="pref-caption">※写真はイメージです。受付開始日は各県が公表している旅行会社での販売開始日です。</p>
-        <p class="pref-note">上の期間・割引率は、各県が定める制度の内容です。県ごとに予算が決まっており、上限に達すると期間内でも終了します。当社での受付は、各県の準備が整い次第、順次ご案内します。ご希望の行き先が決まりましたら、お早めにご相談ください。</p>
+        <p class="pref-caption">※写真はイメージです。大分県は、熊本県または鹿児島県に泊まる周遊型の場合60％になります。</p>
+
+        <h3 class="pref-title">当社ではお取り扱いできない県<span class="script">Other Areas</span></h3>
+        <div class="doc-body">
+          <table>
+            <tr><th>福岡県</th><td>県内に事業所のある旅行会社のみが参画できるため、当社では取り扱えません。予約サイト、または宿泊施設へ直接お申込みください。宿泊対象は10月1日〜12月15日で、他県より10日早く終了します。</td></tr>
+            <tr><th>佐賀県</th><td>県外の旅行会社は取り扱えません。予約サイト、または宿泊施設へ直接お申込みください。宿泊対象は10月1日〜12月25日です。</td></tr>
+            <tr><th>宮崎県</th><td>予算枠が確保できなかったため、当社では取り扱えません。予約サイト、宿泊施設、県内の旅行会社へお申込みください。宿泊対象は10月1日〜12月25日です。</td></tr>
+            <tr><th>鹿児島県</th><td>県外の旅行会社は取り扱えません。予約サイト、または県内の宿泊施設へ直接お申込みください。予約開始は10月中旬の予定、宿泊対象は10月中旬〜2027年2月末（12月26日〜1月3日は対象外）です。</td></tr>
+          </table>
+        </div>
+
+        <h3 class="pref-title">割引上限額<span class="script">Discount Cap</span></h3>
+        <div class="doc-body">
+          <table>
+            <tr><th>宿泊単体・交通付き宿泊旅行（1泊）</th><td>1人1旅行あたり 20,000円</td></tr>
+            <tr><th>交通付き宿泊旅行（2泊以上）</th><td>1人1旅行あたり 30,000円</td></tr>
+            <tr><th>周遊型旅行（宿泊地が2県以上）</th><td>1人1旅行あたり 35,000円</td></tr>
+          </table>
+        </div>
+
+        <p class="pref-note">ご利用にあたっての注意点<br>
+        ・販売開始前のご予約は対象外です。すでにお済みの予約に、あとから割引を付けることはできません。<br>
+        ・県ごと・事業者ごとに予算の枠があり、上限に達した時点で受付を終了します。<br>
+        ・日帰り旅行、ビジネス出張・公費での出張・資格取得目的の宿泊は対象外です。<br>
+        ・ご宿泊時に、代表者の本人確認と、利用証明書へのご署名が必要です。<br>
+        ・九州以外の行き先を含む旅行は、対象外となる場合があります。</p>
       </div>
     </div>
   </section>
@@ -762,6 +788,231 @@ a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible,
 </section>
 
 <!-- =====================================================
+     時刻表
+     ===================================================== -->
+<section class="view" id="view-timetable" data-view="timetable" aria-label="時刻表">
+<div class="view-in">
+  <div class="page-band"><div class="wrap">
+    <div class="script-en">Timetable</div>
+    <h1>大分空港 発着時刻表</h1>
+    <p>2026年9月1日〜9月30日の大分空港発着便と、佐伯ライナー（バス）の接続時刻、JR割引きっぷをご案内します。店頭でお配りしている時刻表と同じ内容です。</p>
+    <p style="margin-top:16px;"><a class="smallbtn" href="files/timetable.pdf" target="_blank" rel="noopener">📄 印刷用PDFを開く（表・裏）</a></p>
+  </div></div>
+  <div class="page-body"><div class="wrap">
+
+    <h2 class="sec-title" style="font-size:28px;">国内線<span class="script">Domestic</span></h2>
+      <div class="tt-pair">
+        <div class="tt-box">
+          <h3>大分 → 東京（羽田）</h3>
+          <table class="tt">
+            <tr><th>便名</th><th>出発</th><th>到着</th></tr>
+            <tr><td class="fl">ANA 792</td><td>07:35</td><td>09:10</td></tr>
+            <tr><td class="fl">JAL 662</td><td>07:35</td><td>09:10</td></tr>
+            <tr><td class="fl">SNA 92／ANA 2492 ①</td><td>08:25</td><td>10:00</td></tr>
+            <tr><td class="fl">ANA 794</td><td>10:15</td><td>11:50</td></tr>
+            <tr><td class="fl">JAL 664</td><td>10:25</td><td>11:55</td></tr>
+            <tr><td class="fl">JAL 668</td><td>11:50</td><td>13:30</td></tr>
+            <tr><td class="fl">SNA 94／ANA 2494 ①</td><td>12:15</td><td>14:00</td></tr>
+            <tr><td class="fl">ANA 796</td><td>13:10</td><td>14:55</td></tr>
+            <tr><td class="fl">JAL 670</td><td>14:25</td><td>16:05</td></tr>
+            <tr><td class="fl">SNA 96／ANA 2496 ①</td><td>16:50</td><td>18:35</td></tr>
+            <tr><td class="fl">JAL 672</td><td>17:20</td><td>19:00</td></tr>
+            <tr><td class="fl">ANA 800</td><td>17:50</td><td>19:35</td></tr>
+            <tr><td class="fl">JAL 674</td><td>19:05</td><td>20:40</td></tr>
+            <tr><td class="fl">SNA 98／ANA 2498 ①</td><td>19:45</td><td>21:20</td></tr>
+          </table>
+        </div>
+        <div class="tt-box">
+          <h3>東京（羽田） → 大分</h3>
+          <table class="tt">
+            <tr><th>便名</th><th>出発</th><th>到着</th></tr>
+            <tr><td class="fl">SNA 91／ANA 2491 ①</td><td>06:25</td><td>07:55</td></tr>
+            <tr><td class="fl">ANA 791</td><td>07:55</td><td>09:30</td></tr>
+            <tr><td class="fl">JAL 661</td><td>08:00</td><td>09:35</td></tr>
+            <tr><td class="fl">JAL 663</td><td>09:35</td><td>11:10</td></tr>
+            <tr><td class="fl">SNA 93／ANA 2493 ①</td><td>09:55</td><td>11:35</td></tr>
+            <tr><td class="fl">ANA 793</td><td>10:50</td><td>12:25</td></tr>
+            <tr><td class="fl">JAL 665</td><td>12:05</td><td>13:40</td></tr>
+            <tr><td class="fl">SNA 95／ANA 2495 ①</td><td>14:40</td><td>16:15</td></tr>
+            <tr><td class="fl">JAL 667</td><td>15:05</td><td>16:40</td></tr>
+            <tr><td class="fl">ANA 797</td><td>15:30</td><td>17:05</td></tr>
+            <tr><td class="fl">JAL 669</td><td>16:40</td><td>18:15</td></tr>
+            <tr><td class="fl">SNA 97／ANA 2497 ①</td><td>17:15</td><td>18:50</td></tr>
+            <tr><td class="fl">ANA 799</td><td>19:15</td><td>20:50</td></tr>
+            <tr><td class="fl">JAL 671</td><td>20:15</td><td>21:45</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="tt-pair">
+        <div class="tt-box">
+          <h3>大分 → 成田</h3>
+          <table class="tt">
+            <tr><th>便名</th><th>出発</th><th>到着</th></tr>
+            <tr><td class="fl">Jetstar 602</td><td>10:40</td><td>12:20</td></tr>
+          </table>
+        </div>
+        <div class="tt-box">
+          <h3>成田 → 大分</h3>
+          <table class="tt">
+            <tr><th>便名</th><th>出発</th><th>到着</th></tr>
+            <tr><td class="fl">Jetstar 609</td><td>08:05</td><td>10:00</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="tt-pair">
+        <div class="tt-box">
+          <h3>大分 → 大阪（伊丹）</h3>
+          <table class="tt">
+            <tr><th>便名</th><th>出発</th><th>到着</th></tr>
+            <tr><td class="fl">JAL 2362</td><td>08:45</td><td>09:40</td></tr>
+            <tr><td class="fl">ANA 1686</td><td>09:15</td><td>10:15</td></tr>
+            <tr><td class="fl">JAL 2364</td><td>11:35</td><td>12:35</td></tr>
+            <tr><td class="fl">ANA 1688</td><td>11:45</td><td>12:45</td></tr>
+            <tr><td class="fl">ANA 1690</td><td>16:15</td><td>17:15</td></tr>
+            <tr><td class="fl">ANA 1692</td><td>18:40</td><td>19:40</td></tr>
+            <tr><td class="fl">JAL 2366</td><td>19:10</td><td>20:15</td></tr>
+          </table>
+        </div>
+        <div class="tt-box">
+          <h3>大阪（伊丹） → 大分</h3>
+          <table class="tt">
+            <tr><th>便名</th><th>出発</th><th>到着</th></tr>
+            <tr><td class="fl">JAL 2361</td><td>07:15</td><td>08:10</td></tr>
+            <tr><td class="fl">ANA 1685</td><td>07:45</td><td>08:45</td></tr>
+            <tr><td class="fl">JAL 2365</td><td>10:10</td><td>11:05</td></tr>
+            <tr><td class="fl">ANA 1687</td><td>10:15</td><td>11:15</td></tr>
+            <tr><td class="fl">ANA 1689</td><td>14:40</td><td>15:40</td></tr>
+            <tr><td class="fl">ANA 1691</td><td>17:05</td><td>18:05</td></tr>
+            <tr><td class="fl">JAL 2367</td><td>17:40</td><td>18:35</td></tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="tt-pair">
+        <div class="tt-box">
+          <h3>大分 → 名古屋（中部）</h3>
+          <table class="tt">
+            <tr><th>便名</th><th>出発</th><th>到着</th></tr>
+            <tr><td class="fl">IBX 62／ANA 3162 ②</td><td>11:00</td><td>12:00</td></tr>
+            <tr><td class="fl">IBX 66／ANA 3166 ②</td><td>19:25</td><td>20:25</td></tr>
+          </table>
+        </div>
+        <div class="tt-box">
+          <h3>名古屋（中部） → 大分</h3>
+          <table class="tt">
+            <tr><th>便名</th><th>出発</th><th>到着</th></tr>
+            <tr><td class="fl">IBX 61／ANA 3161 ②</td><td>09:20</td><td>10:30</td></tr>
+            <tr><td class="fl">IBX 65／ANA 3165 ②</td><td>17:45</td><td>18:55</td></tr>
+          </table>
+        </div>
+      </div>
+
+    <p class="tt-note">①はSNA／ANAの共同運航便（機材・乗務員はSNAで運航）、②はIBX／ANAの共同運航便（機材・乗務員はIBXで運航）です。</p>
+
+    <h2 class="sec-title" style="font-size:28px;">国際線<span class="script">International</span></h2>
+      <div class="tt-pair">
+        <div class="tt-box">
+          <h3>大分 → ソウル（仁川）／台北（桃園）</h3>
+          <table class="tt">
+            <tr><th>便名</th><th>出発</th><th>到着</th></tr>
+            <tr><td class="fl">JEJU air 1812 ⑥</td><td>12:45</td><td>14:35</td></tr>
+            <tr><td class="fl">tigerair 751 ⑦</td><td>16:30</td><td>17:55</td></tr>
+          </table>
+        </div>
+        <div class="tt-box">
+          <h3>ソウル（仁川）／台北（桃園） → 大分</h3>
+          <table class="tt">
+            <tr><th>便名</th><th>出発</th><th>到着</th></tr>
+            <tr><td class="fl">JEJU air 1811 ⑥</td><td>10:00</td><td>11:45</td></tr>
+            <tr><td class="fl">tigerair 750 ⑦</td><td>12:00</td><td>15:00</td></tr>
+          </table>
+        </div>
+      </div>
+
+    <p class="tt-note">⑥は火・水・土のみ運航、⑦は水・土のみ運航です。ソウル線はJEJU air、台北線はtigerairの運航です。</p>
+
+    <h2 class="sec-title" style="font-size:28px;">佐伯ライナー（バス）<span class="script">Access Bus</span></h2>
+    <div class="tt-pair">
+      <div class="tt-box">
+        <h3>佐伯駅前 → 大分空港</h3>
+        <table class="tt">
+          <tr><th>佐伯駅前</th><th>大分空港</th><th></th></tr>
+          <tr><td class="fl">8:30</td><td>10:33</td><td></td></tr>
+          <tr><td class="fl">13:45</td><td>15:48</td><td></td></tr>
+          <tr><td class="fl">15:30</td><td>17:33</td><td></td></tr>
+        </table>
+      </div>
+      <div class="tt-box">
+        <h3>大分空港 → 佐伯駅前</h3>
+        <table class="tt">
+          <tr><th>大分空港</th><th>佐伯駅前</th><th></th></tr>
+          <tr><td class="fl">10:15</td><td>12:22</td><td></td></tr>
+          <tr><td class="fl">11:50</td><td>13:57</td><td></td></tr>
+          <tr><td class="fl">16:55</td><td>19:02</td><td></td></tr>
+        </table>
+      </div>
+    </div>
+    <p class="tt-note">運賃は片道3,000円です。佐伯ライナーは参考時刻です。余裕をもってご利用ください。</p>
+
+    <h2 class="sec-title" style="font-size:28px;">大分ホーバードライブ<span class="script">Hovercraft</span></h2>
+    <div class="tt-pair">
+      <div class="tt-box">
+        <h3>西大分 → 空港</h3>
+        <table class="tt">
+          <tr><th>西大分</th><th>空港</th><th></th></tr>
+          <tr><td class="fl">08:55</td><td>09:30</td><td></td></tr>
+          <tr><td class="fl">10:40</td><td>11:15</td><td></td></tr>
+          <tr><td class="fl">12:00</td><td>12:35</td><td></td></tr>
+          <tr><td class="fl">15:40</td><td>16:15</td><td></td></tr>
+          <tr><td class="fl">16:35</td><td>17:10</td><td></td></tr>
+        </table>
+      </div>
+      <div class="tt-box">
+        <h3>空港 → 西大分</h3>
+        <table class="tt">
+          <tr><th>空港</th><th>西大分</th><th></th></tr>
+          <tr><td class="fl">10:15</td><td>10:50</td><td></td></tr>
+          <tr><td class="fl">12:05</td><td>12:40</td><td></td></tr>
+          <tr><td class="fl">14:25</td><td>15:00</td><td></td></tr>
+          <tr><td class="fl">16:55</td><td>17:30</td><td></td></tr>
+          <tr><td class="fl">17:45</td><td>18:20</td><td></td></tr>
+        </table>
+      </div>
+    </div>
+    <p class="tt-note">ホーバーのチケットは当社ではお取り扱いしていません。運航状況・料金・接続シャトルバスのダイヤなど、詳細はホーバーのホームページをご覧ください。</p>
+
+    <h2 class="sec-title" style="font-size:28px;">JR割引きっぷ<span class="script">JR Ticket</span></h2>
+    <div class="panel">
+      <h3>九州内 2枚きっぷ</h3>
+      <p>2026年7月1日発券分より、運賃・有効期限が変更となりました。</p>
+      <div class="doc-body" style="padding:0;">
+        <table>
+          <tr><th>設定区間</th><th>発売額</th><th>1枚あたり</th></tr>
+          <tr><td>佐伯 〜 博多</td><td>13,520円</td><td>6,760円</td></tr>
+          <tr><td>大分・別府 〜 博多</td><td>8,500円</td><td>4,250円</td></tr>
+        </table>
+      </div>
+      <p class="tt-note">有効期限は7日間、種別は自由席です。指定席をご利用の場合は、指定料金券が別途必要です。</p>
+    </div>
+
+    <div class="info-note">
+      <b>ご利用にあたって</b><br>
+      ・航空運賃は、空席状況および予約・購入のタイミング・便ごとに変動します。<br>
+      ・ダイナミック商品（価格変動型商品）は、ご予約と同時にご購入ください。<br>
+      ・スケジュールは予告なく変更となることがあります。ご利用の際は、各機関のホームページ等で最新の運航状況をご確認ください。<br>
+      ・航空券・JR券・観光券をご購入の際、おひとり様1区間ごとに発券手数料を申し受けます。<br>
+      ・航空券・JR券・観光券のお支払いに、クレジットカードはご利用いただけません。<br>
+      ・JR券は即日発券ができません。事前のご予約をお願いします。発券後の変更・キャンセルには所定の手数料がかかります。<br>
+      ・当社でご購入いただいたANA・SNA・IBXの航空券は、天候事由を含む場合でも空港カウンター・予約センターでの変更・取消ができません。変更・取消が生じた場合は、当社営業時間内にご連絡をお願いします。すべてのお手続きは当社営業時間内におこないます。取消料率の計算は、お手続き時のものが適用となります。
+    </div>
+
+  </div></div>
+</div>
+</section>
+
+<!-- =====================================================
      お問い合わせ
      ===================================================== -->
 <section class="view" id="view-contact" data-view="contact" aria-label="お問い合わせ">
@@ -776,6 +1027,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible,
       <div class="cbox"><span class="ico" aria-hidden="true">📞</span><b>0972-23-8888</b><small>お電話でのご相談（10:00〜19:00）</small><a class="btn btn-navy" href="tel:0972238888">電話をかける</a></div>
       <div class="cbox"><span class="ico" aria-hidden="true">✉️</span><b>yk-tour@saiki.tv</b><small>メールでのご相談</small><a class="btn btn-navy" href="mailto:yk-tour@saiki.tv?subject=%E3%80%90%E6%97%85%E8%A1%8C%E7%9B%B8%E8%AB%87%E3%80%91%E3%83%9B%E3%83%BC%E3%83%A0%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%8B%E3%82%89%E3%81%AE%E3%81%8A%E5%95%8F%E3%81%84%E5%90%88%E3%82%8F%E3%81%9B&amp;body=%E3%83%A9%E3%83%83%E3%82%AD%E3%83%BC%E3%83%88%E3%83%A9%E3%83%99%E3%83%AB%E6%A0%AA%E5%BC%8F%E4%BC%9A%E7%A4%BE%20%E5%BE%A1%E4%B8%AD%0D%0A%0D%0A%E2%96%A0%E3%81%8A%E5%90%8D%E5%89%8D%EF%BC%9A%0D%0A%E2%96%A0%E3%81%8A%E9%9B%BB%E8%A9%B1%E7%95%AA%E5%8F%B7%EF%BC%9A%0D%0A%E2%96%A0%E3%81%94%E7%9B%B8%E8%AB%87%E3%81%AE%E7%A8%AE%E9%A1%9E%EF%BC%88%E6%97%85%E8%A1%8C%E7%9B%B8%E8%AB%87%EF%BC%8F%E8%A6%8B%E7%A9%8D%E3%82%82%E3%82%8A%EF%BC%8F%E5%9B%A3%E4%BD%93%E6%97%85%E8%A1%8C%EF%BC%8F%E8%88%AA%E7%A9%BA%E5%88%B8%E3%83%BB%E5%AE%BF%E6%B3%8A%20%E3%81%AA%E3%81%A9%EF%BC%89%EF%BC%9A%0D%0A%E2%96%A0%E8%A1%8C%E3%81%8D%E5%85%88%EF%BC%9A%0D%0A%E2%96%A0%E4%BA%BA%E6%95%B0%EF%BC%9A%0D%0A%E2%96%A0%E5%87%BA%E7%99%BA%E5%B8%8C%E6%9C%9B%E6%97%A5%EF%BC%9A%0D%0A%E2%96%A0%E3%81%94%E4%BA%88%E7%AE%97%EF%BC%9A%0D%0A%E2%96%A0%E3%81%94%E7%9B%B8%E8%AB%87%E5%86%85%E5%AE%B9%EF%BC%9A%0D%0A%0D%0A">メールを作成する</a></div>
       <div class="cbox"><span class="ico" aria-hidden="true">🏢</span><b>店頭でのご相談</b><small>〒876-0843<br>大分県佐伯市長島町1丁目35-27<br>土曜・日曜・祝日休み</small></div>
+      <div class="cbox"><span class="ico" aria-hidden="true">📷</span><b>Instagram</b><small>@oitlkt<br>最新のお知らせを発信しています</small><a class="btn btn-line" href="https://www.instagram.com/oitlkt/" target="_blank" rel="noopener">Instagramを見る</a></div>
     </div>
     <div class="mail-guide">
       <h2>メールでのご相談方法</h2>
@@ -856,7 +1108,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible,
             <tr><th>取消料</th><td>各旅行商品ごとの旅行条件書に基づきます。</td></tr>
             <tr><th>手配内容</th><td>航空券・宿泊・旅行商品・団体旅行など、お申込み内容に応じて個別にご案内します。</td></tr>
           </table>
-          <p class="todo">【準備中】取消料率などは商品の種類により異なります。正式な旅行条件書の内容を確認のうえ掲載します。</p>
+          <p>取消料率は、旅行商品の種類（パッケージ旅行・宿泊・航空券・JR券・団体旅行など）や、旅行会社ごとに異なります。お申込みの際に、その商品の旅行条件書でご確認ください。ご不明な点は、お電話・メール・店頭でお気軽にお問い合わせください。</p>
         </div>
       </details>
 
@@ -980,6 +1232,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible,
         大分県知事登録旅行業 第2-160号<br>
         （一社）全国旅行業協会 正会員<br>
         総合旅行業務取扱管理者　田村 洋</p>
+        <p class="f-ig"><a href="https://www.instagram.com/oitlkt/" target="_blank" rel="noopener">📷 Instagram @oitlkt　最新のお知らせはこちら</a></p>
       </div>
     </div>
     <nav class="f-links" aria-label="フッターメニュー">
@@ -989,7 +1242,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible,
       <a href="#air">航空券</a><a href="#fee">取扱料金表</a>
       <a href="#hotel">宿泊予約</a><a href="#privacy">個人情報保護方針</a>
       <a href="#group">団体旅行</a><a href="#commerce">特定商取引法に基づく表記</a>
-      <a href="#contact">お問い合わせ</a><a href="#faq">よくある質問</a>
+      <a href="#timetable">時刻表</a><a href="#faq">よくある質問</a>
+      <a href="#contact">お問い合わせ</a>
     </nav>
   </div>
   <p class="copy">© Lucky Travel Co., Ltd. All Rights Reserved.</p>
@@ -1000,7 +1254,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible,select:focus-visible,
 <script>
 // ===== 画面の切り替え =====
 (function(){
-  var views = ['home','domestic','overseas','air','hotel','group','contact','company'];
+  var views = ['home','domestic','overseas','air','hotel','group','timetable','contact','company'];
   // 画面の中の場所（旧アドレスも含む）→ どの画面に属するか
   var inner = {
     guide:'home', license:'company', terms:'company', conditions:'company', fee:'company',
